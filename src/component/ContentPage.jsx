@@ -16,12 +16,12 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import section3 from "../assets/thumbnail.jpg";
-import TableOfContents from "./TableContent";
+import TableOfContents from "./TableOfContents";
 import FloatingOrbsFeatures from "./FloatingOrbsFeatures";
 
 const TimelineNav = ({ currentSection }) => {
   const sections = [
-    { id: "hero", label: "Giới thiệu" },
+    { id: "intro", label: "Giới thiệu" },
     { id: "section1", label: "Quan điểm cơ bản" },
     { id: "section2", label: "Thực hiện sứ mệnh" },
     { id: "section3", label: "Sứ mệnh GCCN Việt Nam" },
@@ -155,13 +155,13 @@ const TimelineItem = ({ year, title, description, isRight, image }) => (
   </div>
 );
 
-const StorytellingPage = () => {
+const ContentPage = () => {
   const [currentSection, setCurrentSection] = useState("hero");
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = [
-        "hero",
+        "intro",
         "section1",
         "section2",
         "section3",
@@ -195,9 +195,10 @@ const StorytellingPage = () => {
   return (
     <div className="bg-black min-h-screen snap-y snap-mandatory overflow-y-auto">
       <TimelineNav currentSection={currentSection} />
-      {/* Hero Section */}
+
+      {/* Introduction Section */}
       <StorySection
-        id="hero"
+        id="intro"
         bgImage="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"
         title="Sứ Mệnh Lịch Sử của Giai Cấp Công Nhân"
         subtitle="Chương 2 - Nhóm 2 - Môn MLN131"
@@ -475,4 +476,4 @@ Duy trì tính tổ chức, đoàn kết, và ý thức cách mạng trong đấ
   );
 };
 
-export default StorytellingPage;
+export default ContentPage;
