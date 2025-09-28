@@ -7,7 +7,7 @@ const TableOfContents = ({ scrollToSection }) => {
   const contents = [
     {
       title: "Sứ Mệnh Lịch Sử của Giai Cấp Công Nhân",
-      id: "hero",
+      id: "intro",
       icon: "🎯",
     },
     {
