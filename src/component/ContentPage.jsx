@@ -369,6 +369,7 @@ const ContentPage = () => {
         </div>
       </StorySection>
 
+
       {/* Section 1: Quan điểm cơ bản */}
       <StorySection
         id="section1"
@@ -692,6 +693,7 @@ const ContentPage = () => {
       </StorySection>
 
       {/* Section 9: Thảo luận */}
+
       <StorySection
         id="section9"
         bgImage="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
