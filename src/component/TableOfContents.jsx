@@ -5,37 +5,12 @@ const TableOfContents = ({ scrollToSection }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const contents = [
-    {
-      title: "Sứ Mệnh Lịch Sử của Giai Cấp Công Nhân",
-      id: "intro",
-      icon: "🎯",
-    },
-    {
-      title: "I. Quan điểm cơ bản của chủ nghĩa Mác-Lênin",
-      id: "section1",
-      icon: "📚",
-    },
-    {
-      title:
-        "II. Giai cấp công nhân và việc thực hiện sứ mệnh lịch sử hiện nay",
-      id: "section2",
-      icon: "⚡",
-    },
-    {
-      title: "III. Sứ mệnh lịch sử của giai cấp công nhân Việt Nam",
-      id: "section3",
-      icon: "🌟",
-    },
-    {
-      title: "IV. Câu hỏi thảo luận",
-      id: "section4",
-      icon: "💭",
-    },
-    {
-      title: "Lời cảm ơn",
-      id: "thanks",
-      icon: "❤️",
-    },
+    { title: "Tôn giáo trong thời kì quá độ lên CNXH", id: "intro", icon: "⛪" },
+    { title: "Giới thiệu thành viên", id: "members", icon: "👥" },
+    { title: "Quan điểm của chủ nghĩa Mác - Lê-nin về tôn giáo", id: "section1", icon: "📖" },
+    { title: "Tôn giáo ở Việt Nam Chính sách tôn giáo của Đảng, Nhà nước", id: "section3", icon: "⚖️" },
+    { title: "Thảo luận về câu hỏi trọng tâm", id: "section9", icon: "💬" },
+    { title: "Lời cảm ơn", id: "thanks", icon: "❤️", }
   ];
 
   return (
