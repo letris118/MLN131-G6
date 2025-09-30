@@ -49,19 +49,11 @@ import DiscussionCarousel from "./DiscussionCarousel";
 const TimelineNav = ({ currentSection }) => {
   const sections = [
     { id: "intro", label: "Giới thiệu" },
+    { id: "members", label: "Thành viên" },
     { id: "section1", label: "Quan điểm cơ bản" },
-    { id: "section2", label: "Thực hiện sứ mệnh" },
-    { id: "section3", label: "Sứ mệnh GCCN Việt Nam" },
-    { id: "religion1", label: "Nguồn gốc & Phát triển" },
-    { id: "religion2", label: "Giá trị Cốt lõi" },
-    { id: "religion3", label: "Sứ mệnh GCCN Việt Nam" },
-    { id: "religion4", label: "Tầm nhìn" },
-    { id: "religion5", label: "Nguyên tắc Hoạt động" },
-    { id: "religion6", label: "Ảnh hưởng & Đóng góp" },
-    { id: "policy-summary", label: "Tóm tắt Chính sách" },
-    { id: "section4", label: "Thảo luận" },
-    { id: "section6", label: "Thảo luận" },
-    { id: "thanks", label: "Kết thúc" }
+    { id: "section3", label: "Tôn giáo ở Việt Nam" },
+    { id: "section9", label: "Thảo luận" },
+    { id: "thanks", label: "Lời kết" }
   ];
 
   const scrollToSection = (sectionId) => {
@@ -210,18 +202,13 @@ const ContentPage = () => {
         "section1",
         "section2",
         "section3",
-        "religion1",
-        "religion2",
-        "religion3",
-        "religion4",
-        "religion5",
-        "religion6",
-        "policy-summary",
-        "cq83",
-        "cq84",
         "section4",
+        "section5",
         "section6",
-        "thanks",
+        "section7",
+        "section8",
+        "section9",
+        "thanks"
       ];
 
       for (const section of sections) {
@@ -279,7 +266,7 @@ const ContentPage = () => {
           className="text-center space-y-4"
         >
           <p className="text-sm md:text-base text-white/80 max-w-xl mx-auto leading-relaxed">
-            • Quan điểm của Mác – Lênin và Hồ Chí Minh về tôn giáo <br />
+            • Quan điểm của Mác – Lê-nin và Hồ Chí Minh về tôn giáo <br />
             • Tôn giáo trong thời kì quá độ lên CNXH <br />
             • Chính sách tôn giáo ở Việt Nam hiện nay
           </p>
@@ -295,7 +282,7 @@ const ContentPage = () => {
 
       <StorySection
         id="members"
-        bgImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c" // placeholder background, replace if you like
+        bgImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
         title="Giới thiệu thành viên"
         subtitle="Nhóm 6"
       >
@@ -386,7 +373,7 @@ const ContentPage = () => {
       <StorySection
         id="section1"
         bgImage="https://image3.luatvietnam.vn/uploaded/1200x675twebp/images/original/2024/07/08/ton-giao-la-gi-__0807114637.jpg"
-        title="Quan điểm của chủ nghĩa Mác - Lênin về tôn giáo"
+        title="Quan điểm của chủ nghĩa Mác - Lê-nin về tôn giáo"
         subtitle="Bản chất, nguồn gốc và tính chất"
         style={{
           backgroundBlendMode: 'overlay',
@@ -416,11 +403,12 @@ const ContentPage = () => {
           />
         </div>
       </StorySection>
+
       {/* Section 2: Giai cấp công nhân hiện nay */}
       <StorySection
         id="section2"
         bgImage="https://cdn-images.vtv.vn/66349b6076cb4dee98746cf1/2024/06/13/chu-tich-nuoc-to-lam-to-chuc-ton-giao-4-61107578069028408955042.png"
-        title="Quan điểm của chủ nghĩa Mác - Lênin về tôn giáo"
+        title="Quan điểm của chủ nghĩa Mác - Lê-nin về tôn giáo"
         subtitle="Giải quyết vấn đề tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội"
       >
         <div className="max-w-6xl mx-auto px-4">
@@ -450,42 +438,14 @@ const ContentPage = () => {
           />
         </div>
       </StorySection>
-      {/* Section 3: Sứ mệnh lịch sử của GCCN Việt Nam */}
-      <StorySection
-        id="section3"
-        bgImage={section3}
-        title="III. Sứ mệnh lịch sử của giai cấp công nhân"
-      >
-        <FloatingOrbsFeatures
-          features={[
-            {
-              icon: Briefcase,
-              title: "Vai trò của GCCN Việt Nam",
-              description:
-                "Là lực lượng tiên phong trong cuộc đấu tranh giải phóng dân tộc, lật đổ chế độ thực dân phong kiến, giành độc lập và xây dựng chủ nghĩa xã hội.",
-            },
-            {
-              icon: Share2,
-              title: "Sứ mệnh lịch sử",
-              description:
-                "Giai cấp công nhân Việt Nam đang đứng trước những cơ hội và thách thức trong bối cảnh hội nhập kinh tế quốc tế và cách mạng công nghiệp lần thứ tư.",
-            },
-            {
-              icon: TrendingUp,
-              title: "Giải pháp phát huy vai trò",
-              description:
-                "Nâng cao chất lượng đào tạo và giáo dục chính trị tư tưởng cho công nhân. Cải thiện điều kiện lao động và đời sống, đảm bảo quyền lợi của giai cấp công nhân.",
-            },
-          ]}
-        />
-      </StorySection>
+
+
       {/* Thứ nhất */}
       <StorySection
-        id="religion1"
-        bgImage={
-          "https://static-images.vnncdn.net/files/publish/viet-nam-la-quoc-gia-da-ton-giao-tin-nguong-758b2019f74c4f63a3eca0b3578d1478.jpg?width=0&s=ndzOK5YgUJwLdN5uEa2WJw"
-        }
-        title="IV. Việt Nam là quốc gia đa tôn giáo"
+        id="section3"
+        bgImage="https://static-images.vnncdn.net/files/publish/viet-nam-la-quoc-gia-da-ton-giao-tin-nguong-758b2019f74c4f63a3eca0b3578d1478.jpg?width=0&s=ndzOK5YgUJwLdN5uEa2WJw"
+        title="Tôn giáo ở Việt Nam và chính sách tôn giáo của Đảng, Nhà nước"
+        subtitle="Việt Nam là quốc gia đa tôn giáo"
       >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -521,13 +481,14 @@ const ContentPage = () => {
           />
         </motion.div>
       </StorySection>
+
+
       {/* Thứ hai */}
       <StorySection
-        id="religion2"
-        bgImage={
-          "https://ttdn.vn/Uploads/Images/2024/2/29/5/8576%207%208.12.jpg"
-        }
-        title="V. Tôn giáo ở Việt Nam có ảnh hưởng lớn đến đời sống chính trị, xã hội"
+        id="section4"
+        bgImage="https://ttdn.vn/Uploads/Images/2024/2/29/5/8576%207%208.12.jpg"
+        title="Tôn giáo ở Việt Nam và chính sách tôn giáo của Đảng, Nhà nước"
+        subtitle="Tôn giáo ở Việt Nam có ảnh hưởng lớn đến đời sống chính trị, xã hội"
       >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -558,13 +519,14 @@ const ContentPage = () => {
           />
         </motion.div>
       </StorySection>
+
+
       {/* Thứ ba */}
       <StorySection
-        id="religion3"
-        bgImage={
-          "https://tuyengiao.hagiang.gov.vn/upload/64711/20250221/grabeea4614022025tl.jpg"
-        }
-        title="VI. Tín đồ gắn bó với dân tộc và cách mạng"
+        id="section5"
+        bgImage="https://tuyengiao.hagiang.gov.vn/upload/64711/20250221/grabeea4614022025tl.jpg"
+        title="Tôn giáo ở Việt Nam và chính sách tôn giáo của Đảng, Nhà nước"
+        subtitle="Tín đồ gắn bó với dân tộc và cách mạng"
       >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -605,60 +567,14 @@ const ContentPage = () => {
           />
         </motion.div>
       </StorySection>
-      {/* Thứ tư */}
-      <StorySection
-        id="religion4"
-        bgImage={
-          "https://static.mattran.org.vn/Uploaded/buidoanhung/2022_02_23/23_2_hop_mat_chuc_sac_chuc_viec_GOWT.jpg"
-        }
-        title="VII. Vai trò của chức sắc tôn giáo"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          <FeatureCard
-            icon={UserCircle2}
-            title="Người lãnh đạo tinh thần"
-            description="Chức sắc là tín đồ có phẩm sắc, giữ vị trí quan trọng trong cộng đồng."
-          />
-          <FeatureCard
-            icon={BookOpen}
-            title="Truyền bá giáo lý"
-            description="Hướng dẫn tín đồ thực hành giáo lý, giáo luật và nếp sống đạo."
-          />
-          <FeatureCard
-            icon={Building}
-            title="Quản lý tổ chức"
-            description="Duy trì và phát triển các tổ chức tôn giáo, điều hành sinh hoạt."
-          />
-          <FeatureCard
-            icon={Heart}
-            title="Chăm lo đời sống tâm linh"
-            description="Đáp ứng nhu cầu tinh thần, giữ niềm tin và sự an lạc cho tín đồ."
-          />
-          <FeatureCard
-            icon={Sparkles}
-            title="Uy tín trong xã hội"
-            description="Có ảnh hưởng lớn, là điểm tựa tinh thần trong cộng đồng."
-          />
-          <FeatureCard
-            icon={TrendingUp}
-            title="Xu hướng tiến bộ"
-            description="Ngày càng gắn bó hơn với sự phát triển của đất nước."
-          />
-        </motion.div>
-      </StorySection>
+
+
       {/* Thứ năm */}
       <StorySection
-        id="religion5"
-        bgImage={
-          "https://file3.qdnd.vn/data/images/0/2022/01/23/thuthuytv/ttxvn_lephatdantaiquangtri.jpg"
-        }
-        title="VIII. Quan hệ quốc tế của các tôn giáo Việt Nam"
+        id="section6"
+        bgImage="https://file3.qdnd.vn/data/images/0/2022/01/23/thuthuytv/ttxvn_lephatdantaiquangtri.jpg"
+        title="Tôn giáo ở Việt Nam và chính sách tôn giáo của Đảng, Nhà nước"
+        subtitle="Quan hệ quốc tế của các tôn giáo Việt Nam"
       >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -694,13 +610,14 @@ const ContentPage = () => {
           />
         </motion.div>
       </StorySection>
+
+
       {/* Thứ sáu */}
       <StorySection
-        id="religion6"
-        bgImage={
-          "https://congan.laichau.gov.vn/uploads/news/2023_05/image-20230526162943-1.jpeg"
-        }
-        title="IX. Âm mưu lợi dụng tôn giáo của thế lực thù địch"
+        id="section7"
+        bgImage="https://congan.laichau.gov.vn/uploads/news/2023_05/image-20230526162943-1.jpeg"
+        title="Tôn giáo ở Việt Nam và chính sách tôn giáo của Đảng, Nhà nước"
+        subtitle="Âm mưu lợi dụng tôn giáo của thế lực thù địch"
       >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -734,11 +651,10 @@ const ContentPage = () => {
 
       {/* Tóm tắt chính sách */}
       <StorySection
-        id="policy-summary"
-        bgImage={
-          "https://tapchilichsudang.vn/pic/Service/images/120-08_20_43_355.jpg"
-        }
-        title="X. Tóm tắt chính sách tôn giáo của Nhà nước Việt Nam"
+        id="section8"
+        bgImage="https://tapchilichsudang.vn/pic/Service/images/120-08_20_43_355.jpg"
+        title="Tôn giáo ở Việt Nam và chính sách tôn giáo của Đảng, Nhà nước"
+        subtitle="Tóm tắt chính sách tôn giáo của Nhà nước Việt Nam"
       >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -774,22 +690,18 @@ const ContentPage = () => {
           />
         </motion.div>
       </StorySection>
-      
-      {/* Section 4: Thảo luận */}
-      
-      {/* Section 6: Thảo luận */}
-      <StorySection
-        id="section6"
-        bgImage="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
-        title="XI. Câu hỏi thảo luận"
-        subtitle="Bác sĩ, giảng viên, IT hiện nay có phải là giai cấp công nhân không?"
 
+      {/* Section 9: Thảo luận */}
+      <StorySection
+        id="section9"
+        bgImage="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+        title="Thảo luận về các câu hỏi trọng tâm"
       >
         <DiscussionCarousel />
       </StorySection>
 
 
-      {/* Section 5: Lời cảm ơn */}
+      {/* Lời cảm ơn */}
       <StorySection
         id="thanks"
         bgImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40"
@@ -802,14 +714,8 @@ const ContentPage = () => {
             className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20"
           >
             <h3 className="text-3xl font-bold text-white mb-6">
-              Cảm ơn quý thầy cô và các bạn đã theo dõi
+              Cảm ơn quý thầy cô và các bạn đã theo dõi!
             </h3>
-            <div className="text-white/80 space-y-4">
-              <p className="text-xl">
-                Chúc quý thầy cô và các bạn nhiều sức khỏe và thành công!
-              </p>
-              <p className="italic">"Học, học nữa, học mãi" - V.I.Lenin</p>
-            </div>
           </motion.div>
         </div>
       </StorySection>

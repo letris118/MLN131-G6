@@ -1,40 +1,23 @@
 import React, { useState, useEffect, useRef } from "react";
-import {
-  Send,
-  User,
-  X,
-  MessageCircle,
-  Bot,
-  Sparkles,
-  RefreshCw,
-} from "lucide-react";
+import { Send, User, X, Bot, Sparkles, RefreshCw } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI(`AIzaSyD7QkI0e_P1igH4Cjdp3ZKoACFr5EcRDgU`);
+// ⚠️ Thay API key của bạn vào đây
+const genAI = new GoogleGenerativeAI("AIzaSyBP35jQSyYXYq8xOijhwZ_SX5mpu4-cjS4");
 
 const INTRODUCTION = {
-  name: "Duck Duck",
-  greeting: `### Xin chào! Tôi là Duck Duck.
-
-Tôi được trang bị kiến thức chuyên sâu về:
-
-* Quan điểm của chủ nghĩa Mác-Lênin về giai cấp công nhân
-* Sứ mệnh lịch sử của giai cấp công nhân
-* Thực trạng và thách thức hiện nay
-* Vai trò của giai cấp công nhân Việt Nam
-
-Bạn có thể chọn một trong các câu hỏi gợi ý hoặc tự đặt câu hỏi. Tôi sẽ cố gắng trả lời chi tiết và chính xác nhất!`,
+  name: "AI",
+  greeting: `### 🤝 Xin chào, tôi là AI với chuyên môn trong lĩnh vực Chủ nghĩa xã hội khoa học, sẵn sàng hỗ trợ bạn trong học tập và nghiên cứu 🤝`,
 };
 
 const predefinedPrompts = [
-  "Khái niệm và đặc điểm cơ bản của giai cấp công nhân là gì?",
-  "Sứ mệnh lịch sử thế giới của giai cấp công nhân trong bối cảnh hiện nay?",
-  "Vai trò của giai cấp công nhân Việt Nam trong thời kỳ đổi mới?",
-  "Bác sĩ, giảng viên, IT hiện nay có phải là giai cấp công nhân không?",
+  "Quan điểm của chủ nghĩa Mác – Lê-nin về bản chất, nguồn gốc và tính chất của tôn giáo?",
+  "Phân tích 4 nguyên tắc giải quyết vấn đề tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội theo quan điểm Mác – Lênin. Hãy chỉ ra ý nghĩa thực tiễn của các nguyên tắc này trong xã hội Việt Nam hiện nay",
 ];
 
+// ============ Floating Button ============ //
 const FloatingButton = ({ onClick, isOpen }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -66,6 +49,7 @@ const FloatingButton = ({ onClick, isOpen }) => {
   );
 };
 
+// ============ Chat Message ============ //
 const ChatMessage = ({ message, isUser }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
@@ -94,21 +78,6 @@ const ChatMessage = ({ message, isUser }) => (
       ) : (
         <ReactMarkdown
           className="prose prose-sm max-w-none prose-headings:mb-2 prose-headings:mt-2 prose-p:mb-2 prose-ul:mb-2"
-          components={{
-            h3: ({ children }) => (
-              <h3 className="text-lg font-bold text-gray-800">{children}</h3>
-            ),
-            ul: ({ children }) => (
-              <ul className="list-disc ml-4 space-y-1">{children}</ul>
-            ),
-            li: ({ children }) => <li className="text-gray-700">{children}</li>,
-            p: ({ children }) => <p className="text-gray-700">{children}</p>,
-            strong: ({ children }) => (
-              <strong className="font-semibold text-gray-800">
-                {children}
-              </strong>
-            ),
-          }}
         >
           {message.text}
         </ReactMarkdown>
@@ -117,13 +86,8 @@ const ChatMessage = ({ message, isUser }) => (
   </motion.div>
 );
 
-const ChatWindow = ({
-  isOpen,
-  onClose,
-  messages,
-  isLoading,
-  onSendMessage,
-}) => {
+// ============ Chat Window ============ //
+const ChatWindow = ({ isOpen, onClose, messages, isLoading, onSendMessage }) => {
   const [input, setInput] = useState("");
   const [showIntro, setShowIntro] = useState(true);
   const messagesEndRef = useRef(null);
@@ -163,7 +127,7 @@ const ChatWindow = ({
                 whileTap={{ scale: 0.9 }}
                 onClick={() => {
                   setShowIntro(true);
-                  setMessages([]);
+                  onClose();
                 }}
                 className="p-2 hover:bg-gray-100 rounded-full"
               >
@@ -264,6 +228,7 @@ const ChatWindow = ({
   );
 };
 
+// ============ Chatbot Assistant ============ //
 const ChatbotAssistant = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([]);
@@ -275,7 +240,8 @@ const ChatbotAssistant = () => {
   }, []);
 
   const initChat = async () => {
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    // ✅ Đúng model (không cần tự fetch)
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     const newChat = model.startChat({
       history: [],
       generationConfig: {
