@@ -23,7 +23,6 @@ const discussions = [
     question: "CQ8.3. Tại sao các tôn giáo khác nhau lại có những ý thức hệ khác nhau, thậm chí đối lập nhau?",
     content: (
       <>
-        {/* Nội dung CQ8.3 bạn copy ở đây */}
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -129,7 +128,6 @@ const discussions = [
     question: "CQ8.4. Chủ nghĩa Mác - Lênin là chủ nghĩa duy vật biện chứng, vậy có phải sẽ xóa bỏ hoàn toàn tôn giáo?",
     content: (
       <>
-        {/* Nội dung CQ8.4 bạn copy ở đây */}
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -199,7 +197,6 @@ const discussions = [
     question: "CQ8.5. Việt Nam là quốc gia đa tôn giáo, vậy đã từng có chiến tranh tôn giáo không?",
     content: (
       <>
-        {/* Nội dung CQ8.5 bạn copy ở đây */}
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
