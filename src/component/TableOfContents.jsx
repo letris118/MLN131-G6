@@ -26,13 +26,6 @@ const TableOfContents = ({ scrollToSection }) => {
       id: "section3",
       icon: "🌟",
     },
-    { title: "Nguồn gốc & Phát triển", id: "religion1", icon: "📖" },
-    { title: "Giá trị Cốt lõi", id: "religion2", icon: "✨" },
-    { title: "Sứ mệnh GCCN Việt Nam", id: "religion3", icon: "🚩" },
-    { title: "Tầm nhìn", id: "religion4", icon: "🔭" },
-    { title: "Nguyên tắc Hoạt động", id: "religion5", icon: "⚖️" },
-    { title: "Ảnh hưởng & Đóng góp", id: "religion6", icon: "🌍" },
-    { title: "Tóm tắt Chính sách", id: "policy-summary", icon: "📑" },
     {
       title: "IV. Câu hỏi thảo luận",
       id: "section4",
