@@ -35,7 +35,7 @@ const TableOfContents = ({ scrollToSection }) => {
     { title: "Tóm tắt Chính sách", id: "policy-summary", icon: "📑" },
     {
       title: "IV. Câu hỏi thảo luận",
-      id: "section4",
+      id: "section6",
       icon: "💭",
     },
     {
