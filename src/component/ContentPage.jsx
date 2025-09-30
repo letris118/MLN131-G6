@@ -13,6 +13,30 @@ import {
   Computer,
   Share2,
   TrendingUp,
+  Church,
+  Landmark,
+  BookOpen,
+  Star,
+  AlertTriangle,
+  HeartHandshake,
+  Sparkles,
+  ShieldCheck,
+  Scale,
+  Flag,
+  UserCircle2,
+  Building,
+  Heart,
+  Globe2,
+  Handshake,
+  Shield,
+  Gavel,
+  Megaphone,
+  Ban,
+  GitBranch,
+  MessageCircle,
+  Lightbulb,
+  HelpCircle,
+  CheckCircle,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import section3 from "../assets/thumbnail.jpg";
@@ -25,6 +49,13 @@ const TimelineNav = ({ currentSection }) => {
     { id: "section1", label: "Quan điểm cơ bản" },
     { id: "section2", label: "Thực hiện sứ mệnh" },
     { id: "section3", label: "Sứ mệnh GCCN Việt Nam" },
+    { id: "religion1", label: "Nguồn gốc & Phát triển" },
+    { id: "religion2", label: "Giá trị Cốt lõi" },
+    { id: "religion3", label: "Sứ mệnh GCCN Việt Nam" },
+    { id: "religion4", label: "Tầm nhìn" },
+    { id: "religion5", label: "Nguyên tắc Hoạt động" },
+    { id: "religion6", label: "Ảnh hưởng & Đóng góp" },
+    { id: "policy-summary", label: "Tóm tắt Chính sách" },
     { id: "section4", label: "Thảo luận" },
     { id: "thanks", label: "Kết thúc" },
   ];
@@ -165,6 +196,15 @@ const ContentPage = () => {
         "section1",
         "section2",
         "section3",
+        "religion1",
+        "religion2",
+        "religion3",
+        "religion4",
+        "religion5",
+        "religion6",
+        "policy-summary",
+        "cq83",
+        "cq84",
         "section4",
         "thanks",
       ];
@@ -195,13 +235,12 @@ const ContentPage = () => {
   return (
     <div className="bg-black min-h-screen snap-y snap-mandatory overflow-y-auto">
       <TimelineNav currentSection={currentSection} />
-
       {/* Introduction Section */}
       <StorySection
         id="intro"
         bgImage="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"
         title="Sứ Mệnh Lịch Sử của Giai Cấp Công Nhân"
-        subtitle="Chương 2 - Nhóm 2 - Môn MLN131"
+        subtitle="Chương 5 - Nhóm 6 - Môn MLN131"
       >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -217,9 +256,7 @@ const ContentPage = () => {
           </button>
         </motion.div>
       </StorySection>
-
       <TableOfContents scrollToSection={scrollToSection} />
-
       {/* Section 1: Quan điểm cơ bản */}
       <StorySection
         id="section1"
@@ -244,7 +281,6 @@ const ContentPage = () => {
           />
         </div>
       </StorySection>
-
       {/* Section 2: Giai cấp công nhân hiện nay */}
       <StorySection
         id="section2"
@@ -283,7 +319,6 @@ Duy trì tính tổ chức, đoàn kết, và ý thức cách mạng trong đấ
           />
         </div>
       </StorySection>
-
       {/* Section 3: Sứ mệnh lịch sử của GCCN Việt Nam */}
       <StorySection
         id="section3"
@@ -313,12 +348,306 @@ Duy trì tính tổ chức, đoàn kết, và ý thức cách mạng trong đấ
           ]}
         />
       </StorySection>
+      {/* Thứ nhất */}
+      <StorySection
+        id="religion1"
+        bgImage={
+          "https://static-images.vnncdn.net/files/publish/viet-nam-la-quoc-gia-da-ton-giao-tin-nguong-758b2019f74c4f63a3eca0b3578d1478.jpg?width=0&s=ndzOK5YgUJwLdN5uEa2WJw"
+        }
+        title="IV. Việt Nam là quốc gia đa tôn giáo"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <FeatureCard
+            icon={Church}
+            title="13 tôn giáo"
+            description="Được công nhận tư cách pháp nhân."
+          />
+          <FeatureCard
+            icon={Landmark}
+            title="40+ tổ chức"
+            description="Đã đăng ký hoạt động hợp pháp."
+          />
+          <FeatureCard
+            icon={Users}
+            title="24 triệu tín đồ"
+            description="Gắn bó đời sống văn hóa tinh thần."
+          />
+          <FeatureCard
+            icon={BookOpen}
+            title="95.000 chức sắc"
+            description="200.000 chức việc, hơn 23.250 cơ sở thờ tự."
+          />
+          <FeatureCard
+            icon={Star}
+            title="Nguồn gốc đa dạng"
+            description="Phật giáo, Công giáo, Tin lành, Hồi giáo, Cao Đài, Hòa Hảo..."
+          />
+        </motion.div>
+      </StorySection>
+      {/* Thứ hai */}
+      <StorySection
+        id="religion2"
+        bgImage={
+          "https://ttdn.vn/Uploads/Images/2024/2/29/5/8576%207%208.12.jpg"
+        }
+        title="V. Tôn giáo ở Việt Nam có ảnh hưởng lớn đến đời sống chính trị, xã hội"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          <FeatureCard
+            icon={HeartHandshake}
+            title="Nhân đạo & từ thiện"
+            description="Các tổ chức tôn giáo tham gia nhiều hoạt động xã hội vì cộng đồng."
+          />
+          <FeatureCard
+            icon={Landmark}
+            title="Đóng góp chính trị"
+            description="Nhiều chức sắc là đại biểu Quốc hội, thành viên Mặt trận Tổ quốc."
+          />
+          <FeatureCard
+            icon={Users}
+            title="Đại đoàn kết"
+            description="Tôn giáo góp phần củng cố khối đoàn kết toàn dân tộc."
+          />
+          <FeatureCard
+            icon={AlertTriangle}
+            title="Thách thức"
+            description="Một số nơi bị lợi dụng để gây chia rẽ, cần cảnh giác."
+          />
+        </motion.div>
+      </StorySection>
+      {/* Thứ ba */}
+      <StorySection
+        id="religion3"
+        bgImage={
+          "https://tuyengiao.hagiang.gov.vn/upload/64711/20250221/grabeea4614022025tl.jpg"
+        }
+        title="VI. Tín đồ gắn bó với dân tộc và cách mạng"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <FeatureCard
+            icon={Users}
+            title="Thành phần nhân dân"
+            description="Đa số tín đồ là nhân dân lao động, gần gũi đời sống cộng đồng."
+          />
+          <FeatureCard
+            icon={Flag}
+            title="Yêu nước & chống ngoại xâm"
+            description="Luôn đồng hành cùng dân tộc trong các phong trào yêu nước, kháng chiến."
+          />
+          <FeatureCard
+            icon={Scale}
+            title="Công lý & công bằng"
+            description="Tôn trọng lẽ phải, gắn bó với truyền thống chính nghĩa của dân tộc."
+          />
+          <FeatureCard
+            icon={ShieldCheck}
+            title="Theo Đảng, theo cách mạng"
+            description="Đồng hành cùng sự nghiệp cách mạng do Đảng lãnh đạo."
+          />
+          <FeatureCard
+            icon={HeartHandshake}
+            title="Xây dựng & bảo vệ Tổ quốc"
+            description="Chung tay xây dựng xã hội, bảo vệ độc lập và toàn vẹn lãnh thổ."
+          />
+          <FeatureCard
+            icon={Sparkles}
+            title="Tốt đời, đẹp đạo"
+            description="Sống hài hòa, gắn đạo với đời, phát huy giá trị nhân văn."
+          />
+        </motion.div>
+      </StorySection>
+      {/* Thứ tư */}
+      <StorySection
+        id="religion4"
+        bgImage={
+          "https://static.mattran.org.vn/Uploaded/buidoanhung/2022_02_23/23_2_hop_mat_chuc_sac_chuc_viec_GOWT.jpg"
+        }
+        title="VII. Vai trò của chức sắc tôn giáo"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <FeatureCard
+            icon={UserCircle2}
+            title="Người lãnh đạo tinh thần"
+            description="Chức sắc là tín đồ có phẩm sắc, giữ vị trí quan trọng trong cộng đồng."
+          />
+          <FeatureCard
+            icon={BookOpen}
+            title="Truyền bá giáo lý"
+            description="Hướng dẫn tín đồ thực hành giáo lý, giáo luật và nếp sống đạo."
+          />
+          <FeatureCard
+            icon={Building}
+            title="Quản lý tổ chức"
+            description="Duy trì và phát triển các tổ chức tôn giáo, điều hành sinh hoạt."
+          />
+          <FeatureCard
+            icon={Heart}
+            title="Chăm lo đời sống tâm linh"
+            description="Đáp ứng nhu cầu tinh thần, giữ niềm tin và sự an lạc cho tín đồ."
+          />
+          <FeatureCard
+            icon={Sparkles}
+            title="Uy tín trong xã hội"
+            description="Có ảnh hưởng lớn, là điểm tựa tinh thần trong cộng đồng."
+          />
+          <FeatureCard
+            icon={TrendingUp}
+            title="Xu hướng tiến bộ"
+            description="Ngày càng gắn bó hơn với sự phát triển của đất nước."
+          />
+        </motion.div>
+      </StorySection>
+      {/* Thứ năm */}
+      <StorySection
+        id="religion5"
+        bgImage={
+          "https://file3.qdnd.vn/data/images/0/2022/01/23/thuthuytv/ttxvn_lephatdantaiquangtri.jpg"
+        }
+        title="VIII. Quan hệ quốc tế của các tôn giáo Việt Nam"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <FeatureCard
+            icon={Globe2}
+            title="Quan hệ rộng mở"
+            description="Cả tôn giáo nội sinh và ngoại nhập đều có giao lưu quốc tế."
+          />
+          <FeatureCard
+            icon={Handshake}
+            title="Kết nối tổ chức quốc tế"
+            description="Liên hệ với các tổ chức và cá nhân tôn giáo nước ngoài."
+          />
+          <FeatureCard
+            icon={Flag}
+            title="Ngoại giao đa phương"
+            description="Việt Nam có quan hệ với gần 200 quốc gia trên thế giới."
+          />
+          <FeatureCard
+            icon={Scale}
+            title="Cân bằng giao lưu"
+            description="Đảm bảo vừa hội nhập quốc tế vừa giữ gìn bản sắc, chủ quyền."
+          />
+          <FeatureCard
+            icon={Shield}
+            title="Ngăn chặn lợi dụng"
+            description="Không để kẻ xấu lợi dụng tự do tôn giáo để chống phá."
+          />
+        </motion.div>
+      </StorySection>
+      {/* Thứ sáu */}
+      <StorySection
+        id="religion6"
+        bgImage={
+          "https://congan.laichau.gov.vn/uploads/news/2023_05/image-20230526162943-1.jpeg"
+        }
+        title="IX. Âm mưu lợi dụng tôn giáo của thế lực thù địch"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6"
+        >
+          <FeatureCard
+            icon={AlertTriangle}
+            title="Diễn biến hòa bình"
+            description="Lợi dụng tôn giáo để thúc đẩy diễn biến hòa bình, gây chia rẽ."
+          />
+          <FeatureCard
+            icon={Users}
+            title="Tập hợp lực lượng"
+            description="Tạo đối trọng với Đảng, tập hợp tín đồ phục vụ mưu đồ chính trị."
+          />
+          <FeatureCard
+            icon={Globe2}
+            title="Quốc tế hóa vấn đề"
+            description="Đưa vấn đề tôn giáo ra quốc tế nhằm gây sức ép với Việt Nam."
+          />
+          <FeatureCard
+            icon={Gavel}
+            title="Vu cáo nhân quyền"
+            description="Lợi dụng dân chủ, nhân quyền, tự do tôn giáo để vu cáo."
+          />
+        </motion.div>
+      </StorySection>
 
+      {/* Tóm tắt chính sách */}
+      <StorySection
+        id="policy-summary"
+        bgImage={
+          "https://tapchilichsudang.vn/pic/Service/images/120-08_20_43_355.jpg"
+        }
+        title="X. Tóm tắt chính sách tôn giáo của Nhà nước Việt Nam"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <FeatureCard
+            icon={ShieldCheck}
+            title="Tự do tín ngưỡng"
+            description="Bảo đảm quyền theo hoặc không theo tôn giáo, bình đẳng trước pháp luật."
+          />
+          <FeatureCard
+            icon={Users}
+            title="Đại đoàn kết dân tộc"
+            description="Đoàn kết đồng bào có đạo và không có đạo, chống phân biệt đối xử."
+          />
+          <FeatureCard
+            icon={Megaphone}
+            title="Vận động quần chúng"
+            description="Động viên tín đồ yêu nước, phát triển kinh tế – xã hội."
+          />
+          <FeatureCard
+            icon={Landmark}
+            title="Trách nhiệm hệ thống chính trị"
+            description="Cả hệ thống chính trị cùng tham gia công tác tôn giáo."
+          />
+          <FeatureCard
+            icon={Ban}
+            title="Quy định theo & truyền đạo"
+            description="Hành đạo hợp pháp được bảo đảm, nhưng cấm mê tín và truyền đạo trái phép."
+          />
+        </motion.div>
+      </StorySection>
       {/* Section 4: Thảo luận */}
       <StorySection
         id="section4"
         bgImage="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
-        title="IV. Câu hỏi thảo luận"
+        title="XI. Câu hỏi thảo luận"
         subtitle="Bác sĩ, giảng viên, IT hiện nay có phải là giai cấp công nhân không?"
       >
         <div className="max-w-4xl mx-auto">
@@ -447,7 +776,6 @@ Duy trì tính tổ chức, đoàn kết, và ý thức cách mạng trong đấ
           </motion.div>
         </div>
       </StorySection>
-
       {/* Section 5: Lời cảm ơn */}
       <StorySection
         id="thanks"
