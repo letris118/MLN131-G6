@@ -28,7 +28,7 @@ const TableOfContents = ({ scrollToSection }) => {
     },
     {
       title: "IV. Câu hỏi thảo luận",
-      id: "section4",
+      id: "section6",
       icon: "💭",
     },
     {
