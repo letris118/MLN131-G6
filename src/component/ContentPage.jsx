@@ -697,7 +697,7 @@ const ContentPage = () => {
       <StorySection
         id="section9"
         bgImage="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
-        title="Thảo luận về các câu hỏi trọng tâm"
+        title="Thảo luận về các câu hỏi kiến tạo"
       >
         <DiscussionCarousel />
       </StorySection>

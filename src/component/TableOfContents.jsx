@@ -9,7 +9,7 @@ const TableOfContents = ({ scrollToSection }) => {
     { title: "Giới thiệu thành viên", id: "members", icon: "👥" },
     { title: "Quan điểm của chủ nghĩa Mác - Lê-nin về tôn giáo", id: "section1", icon: "📖" },
     { title: "Tôn giáo ở Việt Nam Chính sách tôn giáo của Đảng, Nhà nước", id: "section3", icon: "⚖️" },
-    { title: "Thảo luận về câu hỏi trọng tâm", id: "section9", icon: "💬" },
+    { title: "Thảo luận về các câu hỏi kiến tạo", id: "section9", icon: "💬" },
     { title: "Lời cảm ơn", id: "thanks", icon: "❤️", }
   ];
 
